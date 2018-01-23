@@ -17,7 +17,7 @@ def keyboard(request):
 
 @csrf_exempt
 def message(request):
-        message = ((request.body).decode('utf-8'))
+        message = (request.body).decode('utf-8')
         return_json_str = json.loads(message)
         return_str = return_json_str['content']
         today_date = datetime.date.today().strftime("%m월 %d일")
